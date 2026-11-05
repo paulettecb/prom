@@ -8,7 +8,8 @@ Para cambiar un nombre: edita datos/egresados.json y vuelve a correr el script.
 """
 import html, json, os, shutil, sys
 
-DOMINIO = "https://prom.kynstudio.com.mx"  # cámbialo si el subdominio queda distinto
+# En Netlify se toma solo de la variable URL (el dominio principal del sitio).
+DOMINIO = os.environ.get("URL", "https://prom.kynstudio.com.mx").rstrip("/")
 AQUI = os.path.dirname(os.path.abspath(__file__))
 DESCRIPCION = "Graduación de la Licenciatura en Psicología. Viernes 27 de noviembre, 8:00 pm, Mansión Mansur."
 

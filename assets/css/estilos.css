@@ -1,6 +1,8 @@
 /* Graduación Psicología 2026 · design system "Graduación Psicología" */
 
-@font-face { font-family: "Lamoric Rowen"; src: url("../fonts/LamoricRowen.woff") format("woff"); font-display: swap; }
+@font-face { font-family: "Lumiare"; src: url("../fonts/Lumiare.woff") format("woff"); font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("../fonts/HankenGrotesk-Light.woff") format("woff"); font-weight: 300; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url("../fonts/HankenGrotesk-Regular.woff") format("woff"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "NoirEtBlanc"; src: url("../fonts/NoirEtBlanc.woff") format("woff"); font-weight: 400; font-display: swap; }
 @font-face { font-family: "NoirEtBlanc"; src: url("../fonts/NoirEtBlanc-Italic.woff") format("woff"); font-weight: 400; font-style: italic; font-display: swap; }
 @font-face { font-family: "NoirEtBlanc"; src: url("../fonts/NoirEtBlanc-Medium.woff") format("woff"); font-weight: 500; font-display: swap; }
@@ -8,10 +10,11 @@
 @font-face { font-family: "Blastine"; src: url("../fonts/Blastine.woff") format("woff"); font-display: swap; }
 
 :root {
-  --hueso: #F3EFE9; --hueso-2: #E9E3DA; --noche: #1F1826; --noche-2: #2A2233;
+  --hueso: #F7F5F2; --hueso-2: #EEEBE7; --noche: #1F1826; --noche-2: #2A2233;
   --ciruela: #3A0A24; --oro: #C2A061; --oro-claro: #E3C79B; --oro-profundo: #7E5E27;
   --orquidea: #ECC9EA; --lavanda-profunda: #6B4C84;
-  --font-display: "Lamoric Rowen", "Cormorant SC", Georgia, serif;
+  --font-label: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Lumiare", Georgia, serif;
   --font-text: "NoirEtBlanc", "Cormorant Garamond", Georgia, serif;
   --font-script: "Mallcity", cursive;
   --font-numeral: "Blastine", cursive;
@@ -20,8 +23,8 @@
   --pad-x: clamp(16px, 7vw, 110px);
   --pad-y: clamp(80px, 12vw, 160px);
 }
-.t-hueso  { --superficie: var(--hueso); --superficie-2: var(--hueso-2); --tinta: var(--noche); --tinta-suave: #5A4D66; --acento: var(--oro-profundo); --ornamento: var(--oro-profundo); --borde-fino: #D9D0C3; }
-.t-hueso2 { --superficie: var(--hueso-2); --superficie-2: var(--hueso); --tinta: var(--noche); --tinta-suave: #5A4D66; --acento: var(--oro-profundo); --ornamento: var(--oro-profundo); --borde-fino: #D3C9BB; }
+.t-hueso  { --superficie: var(--hueso); --superficie-2: var(--hueso-2); --tinta: var(--noche); --tinta-suave: #5A4D66; --acento: var(--oro-profundo); --ornamento: var(--oro-profundo); --borde-fino: #DEDAD4; }
+.t-hueso2 { --superficie: var(--hueso-2); --superficie-2: var(--hueso); --tinta: var(--noche); --tinta-suave: #5A4D66; --acento: var(--oro-profundo); --ornamento: var(--oro-profundo); --borde-fino: #D8D3CC; }
 .t-noche  { --superficie: var(--noche); --superficie-2: var(--noche-2); --tinta: var(--hueso); --tinta-suave: #CDC3D6; --acento: var(--oro-claro); --ornamento: var(--oro); --borde-fino: #3C3245; }
 .t-gala   { --superficie: var(--ciruela); --superficie-2: #4A1430; --tinta: var(--hueso); --tinta-suave: #E6D3DC; --acento: var(--oro-claro); --ornamento: var(--oro-claro); --borde-fino: #5A2340; }
 
@@ -107,7 +110,7 @@ a { color: inherit; }
 .tarjeta__contenido { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .9em; padding: 2.6em 1.9em; text-align: center; }
 .t-eyebrow { font-family: var(--font-display); font-size: .62em; letter-spacing: .24em; color: var(--oro-profundo); }
 .t-script { font-family: var(--font-script); font-size: 1.55em; line-height: 1.15; color: var(--lavanda-profunda); text-wrap: balance; }
-.t-nombre { font-family: var(--font-text); font-size: 2.55em; line-height: 1.02; letter-spacing: -.005em; text-wrap: balance; max-width: 14em; }
+.t-nombre { font-family: var(--font-display); font-size: 2.35em; line-height: 1.02; letter-spacing: -.01em; text-wrap: balance; max-width: 14em; }
 .t-filete { width: 3.2em; height: 1px; background: var(--oro); }
 .t-fecha { display: flex; align-items: baseline; gap: .35em; margin-top: 1.5em; }
 .t-num { font-family: var(--font-numeral); font-size: 1.5em; line-height: 1; color: var(--oro-profundo); }
@@ -190,6 +193,13 @@ a { color: inherit; }
 .cierre .sello-grande { width: clamp(80px, 12vw, 120px); height: auto; aspect-ratio: 1; }
 .c-script { font-family: var(--font-script); font-size: clamp(48px, 12vw, 84px); line-height: 1.1; color: var(--oro-claro); margin-top: 18px; }
 .c-num { font-family: var(--font-numeral); font-size: clamp(22px, 5vw, 36px); line-height: 2.7; color: var(--orquidea); margin-top: 0; }
+
+
+/* Etiquetas en Hanken Grotesk, títulos en NoirEtBlanc */
+.esc-eyebrow, .t-eyebrow, .t-lugar, .eyebrow, .arco span, .fg-dia, .fg-hora, .boton { font-family: var(--font-label); font-weight: 400; text-transform: uppercase; }
+.titulo-grande, .lugar h3, .v-titulo { text-transform: none; letter-spacing: -.01em; }
+.que { font-family: var(--font-text); letter-spacing: 0; font-size: clamp(20px, 2.5vw, 27px); }
+.t-eyebrow, .t-lugar { letter-spacing: .26em; }
 
 /* Aparecer */
 .aparece { opacity: 0; transform: translateY(26px); transition: opacity .95s var(--lento), transform .95s var(--lento); }

@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "python3 construir.py"
 
 # Un link mal escrito cae en la invitación general
 [[redirects]]
