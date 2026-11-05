@@ -136,10 +136,14 @@ a { color: inherit; }
 .cuenta-sec { padding-top: clamp(150px, 18vw, 220px); }
 .guirnalda { position: absolute; left: 0; top: 0; width: 100%; height: clamp(110px, 12vw, 150px); }
 .guirnalda .cable { fill: none; stroke: #5A4B3A; stroke-width: 1.2; }
-.guirnalda .halo { fill: #F6D9A0; opacity: .2; }
-.guirnalda .bulbo { fill: #F6D9A0; stroke: #C2A061; stroke-width: .6; }
-.foco { animation: foco 3s ease-in-out infinite; }
-@keyframes foco { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+.guirnalda.aparece { transform: none; }
+.guirnalda .halo { fill: #F6D9A0; opacity: 0; transition: opacity .7s ease calc(var(--i) * 90ms + 300ms); }
+.guirnalda .bulbo { fill: #4A3E33; stroke: #C2A061; stroke-width: .6; transition: fill .5s ease calc(var(--i) * 90ms + 300ms); }
+.foco { transform-box: fill-box; transform-origin: 50% 0; animation: columpio 3.6s ease-in-out infinite alternate; animation-delay: calc(var(--i) * -0.41s); }
+.guirnalda.si .bulbo { fill: #F6D9A0; }
+.guirnalda.si .halo { opacity: .26; animation: titileo 2.8s ease-in-out infinite; animation-delay: calc(var(--i) * -0.37s + 2.2s); }
+@keyframes columpio { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
+@keyframes titileo { 0%, 100% { opacity: .26; } 45% { opacity: .08; } 55% { opacity: .34; } }
 .cuenta-sec .script-acento { color: var(--orquidea); }
 .cuenta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(8px, 2.6vw, 32px); width: 100%; max-width: 760px; margin-top: 26px; }
 .arco { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; aspect-ratio: 5 / 8;
