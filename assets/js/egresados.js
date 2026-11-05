@@ -1,7 +1,7 @@
 window.EGRESADOS = [
  {
-  "slug": "leidy",
-  "corto": "Leidy",
+  "slug": "johana",
+  "corto": "Johana",
   "completo": "Leidy Johana Alegrías Ico"
  },
  {
