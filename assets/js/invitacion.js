@@ -143,11 +143,11 @@
     $('escenario').scrollTop = 0;
     [para, pista, escEyebrow].forEach(function (el) { el.style.opacity = '0'; });
     setTimeout(function () { sobre.classList.add('atras'); }, 480 * t);
-    setTimeout(function () { sacarTarjeta(quieto ? 1 : 700); }, 520 * t);
+    setTimeout(function () { sacarTarjeta(quieto ? 1 : 700); }, 1450 * t);
     setTimeout(function () {
       tarjeta.style.transform = 'translate(-50%,-50%) translate(' + L.cardX + 'px,' + L.cardY + 'px)';
       sobre.style.transform = 'translate(-50%,-50%) translate(' + L.envX + 'px,' + L.envY + 'px) rotate(-2deg)';
-    }, 1250 * t);
+    }, 2250 * t);
     setTimeout(function () {
       tarjeta.style.transition = 'none';
       sobre.style.transition = 'none';
@@ -158,7 +158,7 @@
       colocar(0);
       desliza.style.opacity = '1';
       revisar();
-    }, 2200 * t);
+    }, 3150 * t);
   }
   sobre.addEventListener('click', abrir);
 
