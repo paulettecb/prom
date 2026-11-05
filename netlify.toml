@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+# Un link mal escrito cae en la invitación general
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 302
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

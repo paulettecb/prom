@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../assets/css/estilos.css">
+<style>
+  body{margin:0;width:1200px;height:630px;background:var(--noche);overflow:hidden}
+  .og{display:grid;grid-template-columns:540px 1fr;align-items:center;gap:56px;height:630px;padding:0 72px}
+  .sobre{position:relative;left:auto;top:auto;transform:none;width:540px;height:356px;margin:0!important;animation:none;cursor:default}
+  .t{color:var(--hueso)}
+  .t .eyebrow{color:var(--oro-claro);font-size:18px}
+  .t .script{font-family:var(--font-script);font-size:64px;color:var(--oro-claro);margin-top:18px;line-height:1.1}
+  .t .cuando{font-family:var(--font-display);font-size:18px;letter-spacing:.22em;color:#CDC3D6;margin-top:26px}
+  .t hr{width:72px;height:1px;border:0;background:var(--oro);margin:26px 0 0}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="psi-sello" viewBox="0 0 200 200"><path d="M100 38 V164" stroke-width="9"/><path d="M86 38 H114 M80 164 H120" stroke-width="7"/><path d="M58 56 C58 76 56 94 66 110 C74 124 87 130 100 130 C113 130 126 124 134 110 C144 94 142 76 142 56" stroke-width="9"/><path d="M48 56 H68 M132 56 H152" stroke-width="7"/></symbol></svg>
+<div class="og">
+  <div class="sobre">
+    <div class="sobre__fondo"></div>
+    <div class="sobre__bolsa"></div>
+    <div class="sobre__bajo"></div><svg class="sobre__lineas" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0 L50 62 L100 0"/><path d="M0 100 L50 64 L100 100"/></svg>
+    <div class="sobre__solapa"><div class="cara cara--frente"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0 L50 100 L100 0" fill="none" stroke="#C2A061" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".7"/></svg></div></div>
+    <div class="sobre__sello"><svg class="psi"><use href="#psi-sello"/></svg></div>
+  </div>
+  <div class="t">
+    <p class="eyebrow">Graduación · Psicología 2026</p>
+    <p class="script">{{PARA}}</p>
+    <hr>
+    <p class="cuando">Viernes 27 de noviembre · 8:00 pm</p>
+  </div>
+</div>
+</body></html>

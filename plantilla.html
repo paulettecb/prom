@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITULO}}</title>
+<meta name="description" content="{{DESCRIPCION}}">
+<meta name="theme-color" content="#1F1826">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="{{TITULO}}">
+<meta property="og:description" content="{{DESCRIPCION}}">
+<meta property="og:url" content="{{URL}}">
+<meta property="og:image" content="{{OG_IMAGEN}}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{R}}assets/img/psi-oro.svg" type="image/svg+xml">
+<link rel="preload" href="{{R}}assets/fonts/Mallcity.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="{{R}}assets/fonts/LamoricRowen.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="{{R}}assets/fonts/Blastine.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="{{R}}assets/css/estilos.css">
+</head>
+<body class="cerrado" data-egresado="{{SLUG}}">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="psi" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="94" stroke-width="1.5"/>
+    <circle cx="100" cy="100" r="86" stroke-width="0.75" stroke-dasharray="1 5"/>
+    <path d="M100 42 V160" stroke-width="3.2"/>
+    <path d="M91 42 H109 M86 160 H114" stroke-width="2"/>
+    <path d="M64 58 C64 76 62 92 70 106 C77 118 88 123 100 123 C112 123 123 118 130 106 C138 92 136 76 136 58" stroke-width="3.2"/>
+    <path d="M57 58 H71 M129 58 H143" stroke-width="2"/>
+  </symbol>
+  <symbol id="psi-solo" viewBox="40 30 120 140">
+    <path d="M100 42 V160" stroke-width="3.2"/>
+    <path d="M91 42 H109 M86 160 H114" stroke-width="2"/>
+    <path d="M64 58 C64 76 62 92 70 106 C77 118 88 123 100 123 C112 123 123 118 130 106 C138 92 136 76 136 58" stroke-width="3.2"/>
+    <path d="M57 58 H71 M129 58 H143" stroke-width="2"/>
+  </symbol>
+  <symbol id="psi-sello" viewBox="0 0 200 200">
+    <path d="M100 38 V164" stroke-width="9"/>
+    <path d="M86 38 H114 M80 164 H120" stroke-width="7"/>
+    <path d="M58 56 C58 76 56 94 66 110 C74 124 87 130 100 130 C113 130 126 124 134 110 C144 94 142 76 142 56" stroke-width="9"/>
+    <path d="M48 56 H68 M132 56 H152" stroke-width="7"/>
+  </symbol>
+  <symbol id="destello" viewBox="-10 -10 20 20">
+    <path d="M0 -10 Q2.2 -2.2 10 0 Q2.2 2.2 0 10 Q-2.2 2.2 -10 0 Q-2.2 -2.2 0 -10Z"/>
+  </symbol>
+</svg>
+
+<!-- ───────── Apertura: sobre → tarjeta → hero ───────── -->
+<section class="apertura" id="apertura">
+  <div class="escenario" id="escenario">
+    <div class="brillo" aria-hidden="true"></div>
+    <div class="flotan" id="flotan" aria-hidden="true">
+      <svg style="left:12%;top:18%;width:14px"><use href="#destello"/></svg>
+      <svg style="left:82%;top:14%;width:10px;animation-delay:-2s"><use href="#destello"/></svg>
+      <svg style="left:88%;top:62%;width:16px;animation-delay:-4s"><use href="#destello"/></svg>
+      <svg style="left:8%;top:72%;width:10px;animation-delay:-1s"><use href="#destello"/></svg>
+      <svg style="left:22%;top:88%;width:8px;animation-delay:-3s"><use href="#destello"/></svg>
+      <svg style="left:70%;top:86%;width:11px;animation-delay:-5s"><use href="#destello"/></svg>
+    </div>
+
+    <p class="esc-eyebrow" id="escEyebrow">Licenciatura en Psicología · 2026</p>
+
+    <button class="sobre" id="sobre" type="button" aria-label="Abrir la invitación">
+      <div class="sobre__fondo"><img src="{{R}}assets/img/forro-rorschach.svg" alt=""></div>
+      <div class="sobre__bolsa"></div>
+      <div class="sobre__bajo"></div>
+      <svg class="sobre__lineas" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L50 62 L100 0"/><path d="M0 100 L50 64 L100 100"/></svg>
+      <div class="sobre__solapa" id="solapa">
+        <div class="cara cara--frente"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 L50 100 L100 0" fill="none" stroke="#C2A061" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".7"/></svg></div>
+        <div class="cara cara--forro"><img src="{{R}}assets/img/forro-rorschach.svg" alt=""></div>
+      </div>
+      <div class="sobre__sello" id="sello"><svg class="psi"><use href="#psi-sello"/></svg></div>
+    </button>
+
+    <p class="sobre__para" id="para">{{PARA}}</p>
+    <p class="sobre__pista" id="pista">toca el sello para abrir</p>
+
+    <article class="tarjeta" id="tarjeta" aria-label="Invitación">
+      <svg class="tarjeta__marca psi" aria-hidden="true"><use href="#psi-solo"/></svg>
+      <div class="tarjeta__marco" aria-hidden="true"></div>
+      <div class="tarjeta__contenido">
+        <p class="t-eyebrow">Licenciatura en Psicología · UVM</p>
+        <p class="t-script" id="invitado-a">{{INVITADO_A}}</p>
+        <h1 class="t-nombre" id="nombre">{{NOMBRE}}</h1>
+        <span class="t-filete" aria-hidden="true"></span>
+        <p class="t-fecha"><span class="t-num">27</span><span class="t-mes">de noviembre</span></p>
+        <p class="t-lugar">viernes · 8:00 pm · mansión mansur</p>
+      </div>
+    </article>
+
+    <div class="desliza" id="desliza" aria-hidden="true"><span>desliza</span><i><b></b></i></div>
+  </div>
+</section>
+
+<main class="invitacion" id="invitacion">
+
+  <!-- Bienvenida -->
+  <section class="sec bienvenida t-hueso">
+    <svg class="psi mini aparece" aria-hidden="true"><use href="#psi"/></svg>
+    <p class="script-acento aparece">bienvenidos</p>
+    <p class="parrafo aparece">Después de tanto esfuerzo, desvelos y retos superados, llegó la noche de soltar el estrés, brindar por la meta y celebrar en grande. Nos encantaría que estés ahí.</p>
+  </section>
+
+  <!-- Fecha y lugar -->
+  <section class="sec fecha-sec t-noche">
+    <div class="fecha-grid">
+      <div class="fecha-gigante aparece">
+        <span class="fg-dia">viernes</span>
+        <span class="fg-num">27</span>
+        <span class="fg-mes">noviembre</span>
+        <span class="fg-hora">8:00 pm · 2026</span>
+      </div>
+      <div class="lugar aparece">
+        <p class="eyebrow">El lugar</p>
+        <h3>Mansión Mansur</h3>
+        <p class="direccion">Salón de eventos<br>C. Administradores 5376, Arcos de Guadalupe<br>45037 Zapopan, Jalisco</p>
+        <div class="botones">
+          <a class="boton" href="https://www.google.com/maps/search/?api=1&amp;query=Mansi%C3%B3n%20Mansur%2C%20C.%20Administradores%205376%2C%20Arcos%20de%20Guadalupe%2C%2045037%20Zapopan%2C%20Jal." target="_blank" rel="noopener">Google Maps →</a>
+          <a class="boton" href="https://waze.com/ul?q=Mansi%C3%B3n%20Mansur%20Administradores%205376%20Zapopan&amp;navigate=yes" target="_blank" rel="noopener">Waze →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerario -->
+  <section class="sec itinerario-sec t-hueso">
+    <p class="script-acento aparece">la noche</p>
+    <h2 class="titulo-grande aparece">Itinerario</h2>
+    <ol class="linea">
+      <li class="aparece"><img src="{{R}}assets/img/psi-oro-profundo.svg" alt="" class="ill ill-psi"><div><p class="hora"><b>8:00</b><span>pm</span></p><p class="que">Ingreso al salón</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/birrete-lt.svg" alt="" class="ill"><div><p class="hora"><b>9:30</b><span>pm</span></p><p class="que">Ingreso de graduados</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/copas-lt.svg" alt="" class="ill"><div><p class="hora"><span>y luego</span></p><p class="que">Brindis</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/plato-lt.svg" alt="" class="ill"><div><p class="hora"><b>10:30</b><span>pm</span></p><p class="que">Cena</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/espejo-lt.svg" alt="" class="ill"><div><p class="hora"><b>11:00</b><span>pm</span></p><p class="que">Cabina de fotos espejo</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/bola-disco-lt.svg" alt="" class="ill"><div><p class="hora"><b>11:30</b><span>pm</span></p><p class="que">Se abre la pista</p></div></li>
+      <li class="aparece"><img src="{{R}}assets/img/luna-lt.svg" alt="" class="ill"><div><p class="hora"><b>3:00</b><span>am</span></p><p class="que">Fin de la fiesta</p></div></li>
+    </ol>
+  </section>
+
+  <!-- Cuenta regresiva: bajo las luces del toldo -->
+  <section class="sec cuenta-sec t-noche">
+    <svg class="guirnalda" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMin slice" aria-hidden="true"><path class="cable" d="M0 18 Q300 118 600 18 Q900 118 1200 18"/><g class="foco" style="animation-delay:0.00s"><path class="cable" d="M60 36 v10"/><circle class="halo" cx="60" cy="54" r="16"/><path class="bulbo" d="M56 46 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:2.63s"><path class="cable" d="M120 50 v10"/><circle class="halo" cx="120" cy="68" r="16"/><path class="bulbo" d="M116 60 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:2.26s"><path class="cable" d="M180 60 v10"/><circle class="halo" cx="180" cy="78" r="16"/><path class="bulbo" d="M176 70 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.89s"><path class="cable" d="M240 66 v10"/><circle class="halo" cx="240" cy="84" r="16"/><path class="bulbo" d="M236 76 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.52s"><path class="cable" d="M300 68 v10"/><circle class="halo" cx="300" cy="86" r="16"/><path class="bulbo" d="M296 78 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.15s"><path class="cable" d="M360 66 v10"/><circle class="halo" cx="360" cy="84" r="16"/><path class="bulbo" d="M356 76 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.78s"><path class="cable" d="M420 60 v10"/><circle class="halo" cx="420" cy="78" r="16"/><path class="bulbo" d="M416 70 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.41s"><path class="cable" d="M480 50 v10"/><circle class="halo" cx="480" cy="68" r="16"/><path class="bulbo" d="M476 60 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.04s"><path class="cable" d="M540 36 v10"/><circle class="halo" cx="540" cy="54" r="16"/><path class="bulbo" d="M536 46 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:2.67s"><path class="cable" d="M660 36 v10"/><circle class="halo" cx="660" cy="54" r="16"/><path class="bulbo" d="M656 46 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:2.30s"><path class="cable" d="M720 50 v10"/><circle class="halo" cx="720" cy="68" r="16"/><path class="bulbo" d="M716 60 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.93s"><path class="cable" d="M780 60 v10"/><circle class="halo" cx="780" cy="78" r="16"/><path class="bulbo" d="M776 70 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.56s"><path class="cable" d="M840 66 v10"/><circle class="halo" cx="840" cy="84" r="16"/><path class="bulbo" d="M836 76 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:1.19s"><path class="cable" d="M900 68 v10"/><circle class="halo" cx="900" cy="86" r="16"/><path class="bulbo" d="M896 78 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.82s"><path class="cable" d="M960 66 v10"/><circle class="halo" cx="960" cy="84" r="16"/><path class="bulbo" d="M956 76 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.45s"><path class="cable" d="M1020 60 v10"/><circle class="halo" cx="1020" cy="78" r="16"/><path class="bulbo" d="M1016 70 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:0.08s"><path class="cable" d="M1080 50 v10"/><circle class="halo" cx="1080" cy="68" r="16"/><path class="bulbo" d="M1076 60 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g><g class="foco" style="animation-delay:2.71s"><path class="cable" d="M1140 36 v10"/><circle class="halo" cx="1140" cy="54" r="16"/><path class="bulbo" d="M1136 46 h8 v3 c4 3 5 9 0 13 c-2 2 -6 2 -8 0 c-5 -4 -4 -10 0 -13z"/></g></svg>
+    <p class="script-acento aparece" id="faltanTxt">faltan</p>
+    <div class="cuenta aparece" id="cuenta">
+      <div class="arco"><b data-u="d">00</b><span>días</span></div>
+      <div class="arco"><b data-u="h">00</b><span>horas</span></div>
+      <div class="arco"><b data-u="m">00</b><span>minutos</span></div>
+      <div class="arco"><b data-u="s">00</b><span>segundos</span></div>
+    </div>
+    <p class="cuenta-nota aparece">para que se prendan las luces</p>
+  </section>
+
+  <!-- Vestimenta -->
+  <section class="sec vestimenta t-gala">
+    <div class="marco-doble aparece">
+      <p class="eyebrow">Código de vestimenta</p>
+      <p class="v-script">de gala</p>
+      <h2 class="v-titulo">Formal de noche</h2>
+      <p class="v-nota">vestido largo y traje oscuro</p>
+    </div>
+  </section>
+
+  <!-- Egresados -->
+  <section class="sec egresados-sec t-noche">
+    <span class="marca-agua" aria-hidden="true">2026</span>
+    <p class="script-acento aparece">la generación</p>
+    <h2 class="titulo-grande aparece">Egresados</h2>
+    <ul class="egresados aparece" id="lista">{{LISTA}}</ul>
+  </section>
+
+  <!-- Cierre -->
+  <section class="sec cierre t-gala">
+    <svg class="psi sello-grande aparece" aria-hidden="true"><use href="#psi"/></svg>
+    <p class="c-script aparece">te esperamos</p>
+    <p class="c-num aparece">27 · 11 · 26</p>
+  </section>
+</main>
+
+<script>window.EGRESADO = {{DATOS}};</script>
+<script src="{{R}}assets/js/egresados.js"></script>
+<script src="{{R}}assets/js/invitacion.js"></script>
+</body>
+</html>
