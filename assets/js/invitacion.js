@@ -74,8 +74,22 @@
     desliza.style.opacity = String(Math.max(0, 1 - q / 0.14));
   }
 
+  /* Itinerario: la línea avanza con el scroll */
+  var linea = $('linea'), momentos = linea ? [].slice.call(linea.querySelectorAll('li')) : [];
+  function avanzar() {
+    if (!linea) return;
+    var r = linea.getBoundingClientRect(), punto = window.innerHeight * 0.62;
+    var a = Math.min(1, Math.max(0, (punto - r.top - 20) / Math.max(1, r.height - 40)));
+    linea.style.setProperty('--avance', a.toFixed(4));
+    momentos.forEach(function (li) {
+      var ill = li.querySelector('.ill').getBoundingClientRect();
+      if (ill.top + ill.height / 2 < punto) li.classList.add('tocado');
+    });
+  }
+
   function alScroll() {
     revisar();
+    avanzar();
     if (!vivo) return;
     var recorrido = Math.max(1, (L.openH - L.H) * 0.72);
     var q = Math.min(1, Math.max(0, window.scrollY / recorrido));
