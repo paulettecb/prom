@@ -5,8 +5,8 @@ window.EGRESADOS = [
   "completo": "Leidy Johana Alegrías Ico"
  },
  {
-  "slug": "dalia",
-  "corto": "Dalia",
+  "slug": "noemi",
+  "corto": "Noemí",
   "completo": "Dalia Noemí Arriaga Bustamante"
  },
  {
@@ -15,8 +15,8 @@ window.EGRESADOS = [
   "completo": "Anna Paulette Cambrón Barrales"
  },
  {
-  "slug": "marcela",
-  "corto": "Marcela",
+  "slug": "marce",
+  "corto": "Marce",
   "completo": "Marcela Cardozo Zepeda"
  },
  {
@@ -35,8 +35,8 @@ window.EGRESADOS = [
   "completo": "Melissa Arlette González Nova"
  },
  {
-  "slug": "carolina",
-  "corto": "Carolina",
+  "slug": "caro",
+  "corto": "Caro",
   "completo": "Carolina Graciela Hernández García"
  },
  {
@@ -70,8 +70,8 @@ window.EGRESADOS = [
   "completo": "Jazmín Alejandra Rodríguez Reyna"
  },
  {
-  "slug": "ismael",
-  "corto": "Ismael",
+  "slug": "tessa",
+  "corto": "Tessa",
   "completo": "Ismael Emmanuel Rosales Macías"
  },
  {
@@ -85,8 +85,8 @@ window.EGRESADOS = [
   "completo": "Ana Sarahí Ruiz Myers"
  },
  {
-  "slug": "ofelia",
-  "corto": "Ofelia",
+  "slug": "andrea",
+  "corto": "Andrea",
   "completo": "Ofelia Andrea Sánchez Montellano"
  },
  {
@@ -95,8 +95,8 @@ window.EGRESADOS = [
   "completo": "Yaneth Sepúlveda Valencia"
  },
  {
-  "slug": "denny",
-  "corto": "Denny",
+  "slug": "deni",
+  "corto": "Deni",
   "completo": "Ian Denilson Vera Reyna"
  }
 ];
