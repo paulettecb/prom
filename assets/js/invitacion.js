@@ -97,7 +97,7 @@
 
   /* La tarjeta sale de la bolsa: lo que todavía está adentro no se ve. */
   function sacarTarjeta(dur) {
-    var boca = -L.envH / 2 + 0.36 * L.envH;          // línea de la bolsa, relativa al centro
+    var boca = -L.envH / 2 + 0.5 * L.envH;          // línea de la bolsa, relativa al centro
     var y0 = boca + L.cardH / 2 + 4, y1 = -0.72 * L.envH;
     var t0 = null;
     tarjeta.style.transition = 'none';

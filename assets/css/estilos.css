@@ -57,19 +57,20 @@ a { color: inherit; }
 @keyframes respira-sobre { 50% { margin-top: -6px; } }
 .sobre:focus-visible { outline: 2px solid var(--oro); outline-offset: 10px; }
 .sobre::before { content: ""; position: absolute; left: 6%; right: 6%; bottom: -7%; height: 14%; background: rgba(0,0,0,.55); filter: blur(24px); border-radius: 50%; }
-.sobre__fondo { position: absolute; inset: 0; background: linear-gradient(180deg, #24061A 0%, #2E0820 60%, #3A0A24 100%); border-radius: 3px; overflow: hidden; z-index: 1; }
-.sobre__fondo img { display: none; }
-.sobre__bolsa { position: absolute; inset: 0; z-index: 3; background: linear-gradient(172deg, #45102D 0%, #3A0A24 100%); border-radius: 3px; clip-path: polygon(0 0, 50% 62%, 100% 0, 100% 100%, 0 100%); }
-.sobre__bajo-sombra { position: absolute; inset: 0; z-index: 3; background: rgba(15,4,10,.45); clip-path: polygon(0 100%, 50% 45%, 100% 100%); filter: blur(2px); }
-.sobre__bajo { position: absolute; inset: 0; z-index: 3; border-radius: 3px; background: linear-gradient(180deg, #5C1B3F 0%, #4A1232 70%, #42102D 100%); clip-path: polygon(0 100%, 50% 48%, 100% 100%); }
+.sobre__fondo { position: absolute; inset: 0; background: linear-gradient(180deg, #4A1232 0%, #40102B 40%, #3A0A24 100%); border-radius: 3px; overflow: hidden; z-index: 1; }
+.sobre__forro-interior { position: absolute; left: 0; top: 0; width: 100%; height: 100%; clip-path: polygon(5% 0, 95% 0, 50% 74%); opacity: 0; transition: opacity .3s; }
+.sobre__forro-interior img { position: absolute; left: 0; top: -62%; width: 100%; height: 114%; object-fit: cover; object-position: 50% 50%; filter: brightness(.82); }
+.sobre.abierto .sobre__forro-interior { opacity: 1; }
+.sobre__bolsa { position: absolute; inset: 0; z-index: 3; background: linear-gradient(180deg, #4C1333 0%, #42102D 35%, #380A23 100%); border-radius: 3px; clip-path: polygon(0 34%, 50% 52%, 100% 34%, 100% 100%, 0 100%); box-shadow: inset 0 1px 0 rgba(227,199,155,.15); }
 .sobre__lineas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
 .sobre__lineas path { fill: none; stroke: var(--oro); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .6; }
 .sobre__solapa { position: absolute; left: 0; top: 0; width: 100%; height: 62%; z-index: 4; transform-origin: 50% 0; transform-style: preserve-3d; transition: transform .95s cubic-bezier(.62,.02,.2,1); }
 .cara { position: absolute; inset: 0; clip-path: polygon(0 0, 100% 0, 50% 100%); backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .cara--frente { background: linear-gradient(180deg, #4E1434 0%, #43102C 100%); }
 .cara--frente svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-.cara--forro { transform: rotateX(180deg); background: var(--noche); clip-path: polygon(0 100%, 100% 100%, 50% 0); }
-.cara--forro img { width: 100%; height: 100%; object-fit: cover; }
+.cara--forro { transform: rotateX(180deg); background: #44112D; clip-path: polygon(0 100%, 100% 100%, 50% 0); }
+.forro-in { position: absolute; inset: 0; clip-path: polygon(5% 100%, 95% 100%, 50% 7%); }
+.forro-in img { position: absolute; left: 0; top: 0; width: 100%; height: 183.9%; object-fit: cover; object-position: 50% 50%; }
 .sobre__sello {
   position: absolute; left: 50%; top: 62%; width: 25%; aspect-ratio: 1; z-index: 5; transform: translate(-50%, -50%);
   border-radius: 50%; display: grid; place-items: center; transition: transform .6s cubic-bezier(.62,.02,.2,1), opacity .5s;
@@ -101,7 +102,7 @@ a { color: inherit; }
 .tarjeta__contenido { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .9em; padding: 2.6em 1.9em; text-align: center; }
 .t-eyebrow { font-family: var(--font-display); font-size: .62em; letter-spacing: .24em; color: var(--oro-profundo); }
 .t-script { font-family: var(--font-script); font-size: 1.55em; line-height: 1.15; color: var(--lavanda-profunda); text-wrap: balance; }
-.t-nombre { font-family: var(--font-display); font-size: 2.15em; line-height: 1.04; letter-spacing: .015em; text-wrap: balance; max-width: 16em; }
+.t-nombre { font-family: var(--font-text); font-size: 2.55em; line-height: 1.02; letter-spacing: -.005em; text-wrap: balance; max-width: 14em; }
 .t-filete { width: 3.2em; height: 1px; background: var(--oro); }
 .t-fecha { display: flex; align-items: baseline; gap: .35em; margin-top: 1.5em; }
 .t-num { font-family: var(--font-numeral); font-size: 1.5em; line-height: 1; color: var(--oro-profundo); }
