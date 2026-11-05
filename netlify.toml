@@ -2,6 +2,17 @@
   publish = "."
   command = "python3 construir.py"
 
+# Links viejos de Erika
+[[redirects]]
+  from = "/erica/*"
+  to = "/kika/"
+  status = 301
+
+[[redirects]]
+  from = "/erika/*"
+  to = "/kika/"
+  status = 301
+
 # Un link mal escrito cae en la invitación general
 [[redirects]]
   from = "/*"

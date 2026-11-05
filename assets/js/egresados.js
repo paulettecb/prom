@@ -75,9 +75,9 @@ window.EGRESADOS = [
   "completo": "Ismael Emmanuel Rosales Macías"
  },
  {
-  "slug": "erica",
-  "corto": "Erica",
-  "completo": "Erica Noemí Ruan Ortiz"
+  "slug": "kika",
+  "corto": "Kika",
+  "completo": "Erika Noemí Ruan Ortiz"
  },
  {
   "slug": "sara",
