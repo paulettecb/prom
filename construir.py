@@ -26,8 +26,9 @@ def escribir(p, texto):
         f.write(texto)
 
 
-def pagina(plantilla, egresados, e):
-    R = "../" if e else ""
+def pagina(plantilla, egresados, e, R=None):
+    if R is None:
+        R = "../" if e else ""
     lista = "".join(f"<li>{html.escape(x['completo'])}</li>" for x in egresados)
     datos = json.dumps({"slug": e["slug"], "corto": e["corto"], "completo": e["completo"]}, ensure_ascii=False) if e else "null"
     valores = {
@@ -60,6 +61,8 @@ def main():
 
     plantilla = leer("plantilla.html")
     escribir("index.html", pagina(plantilla, egresados, None))
+    # Netlify muestra 404.html cuando un link está mal escrito: que caiga en la invitación general
+    escribir("404.html", pagina(plantilla, egresados, None, R="/"))
     for e in egresados:
         escribir(f"{e['slug']}/index.html", pagina(plantilla, egresados, e))
 

@@ -13,12 +13,6 @@
   to = "/kika/"
   status = 301
 
-# Un link mal escrito cae en la invitación general
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 302
-
 [[headers]]
   for = "/assets/fonts/*"
   [headers.values]
