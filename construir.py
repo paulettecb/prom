@@ -7,6 +7,7 @@
 Para cambiar un nombre: edita datos/egresados.json y vuelve a correr el script.
 """
 import html, json, os, shutil, sys
+from urllib.parse import quote
 
 # En Netlify se toma solo de la variable URL (el dominio principal del sitio).
 DOMINIO = os.environ.get("URL", "https://prom.kynstudio.com.mx").rstrip("/")
@@ -37,6 +38,7 @@ def pagina(plantilla, egresados, e, R=None):
         "TITULO": f"Invitados de {e['corto']} · Graduación Psicología 2026" if e else "Graduación Psicología 2026",
         "DESCRIPCION": DESCRIPCION,
         "URL": f"{DOMINIO}/{e['slug']}/" if e else f"{DOMINIO}/",
+        "URL_ENC": quote(f"{DOMINIO}/{e['slug']}/" if e else f"{DOMINIO}/", safe=""),
         "OG_IMAGEN": f"{DOMINIO}/assets/og/{e['slug'] if e else 'general'}.jpg",
         "PARA": f"Invitados de {e['corto']}" if e else "Estás invitado",
         "INVITADO_A": "Estás invitado a la graduación de" if e else "Estás invitado a nuestra",
@@ -46,7 +48,7 @@ def pagina(plantilla, egresados, e, R=None):
     }
     out = plantilla
     for k, v in valores.items():
-        seguro = v if k in ("R", "LISTA", "DATOS") else html.escape(v, quote=True)
+        seguro = v if k in ("R", "LISTA", "DATOS", "URL_ENC") else html.escape(v, quote=True)
         out = out.replace("{{" + k + "}}", seguro)
     return out
 

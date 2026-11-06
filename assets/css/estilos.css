@@ -168,6 +168,9 @@ a { color: inherit; }
 .boton { display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border: 1px solid var(--ornamento); border-radius: var(--r-arco); text-decoration: none; font-family: var(--font-display); font-size: 13px; letter-spacing: .2em; color: var(--acento); transition: background .25s, color .25s; }
 .boton:hover, .boton:focus-visible { background: var(--acento); color: var(--superficie); outline: none; }
 
+.cal-titulo { font-family: var(--font-script); font-size: 26px; color: var(--orquidea); margin-top: 30px; line-height: 1.1; }
+.cal-titulo + .botones { margin-top: 12px; }
+
 /* Itinerario: línea de tiempo */
 .linea { list-style: none; padding: 0; margin: 48px 0 0; width: 100%; max-width: 980px; position: relative; }
 .linea::before { content: ""; position: absolute; left: 44px; top: 20px; bottom: 20px; width: 1px; background: linear-gradient(var(--borde-fino), var(--ornamento) 12%, var(--ornamento) 88%, var(--borde-fino)); opacity: .6; }

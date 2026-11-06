@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Graduacion Psicologia 2026//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:graduacion-psicologia-uvm-2026@prom.kynstudio.com.mx
+DTSTAMP:20261105T180000Z
+DTSTART:20261128T020000Z
+DTEND:20261128T090000Z
+SUMMARY:Graduación Psicología UVM 2026
+LOCATION:Mansión Mansur\, C. Administradores 5376\, Arcos de Guadalupe\, 45037 Zapopan\, Jal.
+DESCRIPTION:Fiesta de graduación de la Licenciatura en Psicología. Código 
+ de vestimenta: formal de noche. https://prom.kynstudio.com.mx/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Mañana es la graduación
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:En 3 horas empieza la graduación
+TRIGGER:-PT3H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
